@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Position Size Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Position Size Calculator</h1>
+        <div class="input-group">
+            <label for="activeCapital">Active Capital (₹):</label>
+            <input type="number" id="activeCapital" placeholder="Enter active capital">
+        </div>
+        <div class="input-group">
+            <label for="entryPrice">Stock Entry Price (₹):</label>
+            <input type="number" id="entryPrice" placeholder="Enter stock entry price">
+        </div>
+        <div class="input-group">
+            <label for="stopLossPrice">Stock Stop Loss Price (₹):</label>
+            <input type="number" id="stopLossPrice" placeholder="Enter stock stop loss price">
+        </div>
+        <div class="input-group">
+            <label for="riskPercentage">Risk Percentage (%):</label>
+            <input type="number" id="riskPercentage" placeholder="Enter risk percentage">
+        </div>
+        <button onclick="calculatePositionSize()">Calculate</button>
+        <div id="results">
+            <p id="positionSize">Position Size: -</p>
+            <p id="riskedAmount">Risked Amount: -</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
