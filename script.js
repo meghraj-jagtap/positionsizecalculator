@@ -28,3 +28,15 @@ function calculatePositionSize() {
 
     previousActiveCapital = activeCapital;
 }
+
+function resetValues() {
+    document.getElementById('activeCapital').value = '';
+    document.getElementById('entryPrice').value = '';
+    document.getElementById('stopLossPrice').value = '';
+    document.getElementById('riskPercentage').value = '';
+    document.getElementById('riskRewardRatio').value = '';
+    document.getElementById('positionSize').innerText = '-';
+    document.getElementById('riskedAmount').innerText = '-';
+    document.getElementById('takeProfit').innerText = '-';
+    previousActiveCapital = null;
+}
