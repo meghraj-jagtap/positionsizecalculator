@@ -4,50 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Position Size Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Stock Position Size Calculator</h1>
-        <div class="input-group">
-            <label for="activeCapital">Active Capital (₹):</label>
-            <input type="number" id="activeCapital" placeholder="Enter active capital">
-        </div>
-        <div class="input-group">
-            <label for="entryPrice">Stock Entry Price (₹):</label>
-            <input type="number" id="entryPrice" placeholder="Enter stock entry price">
-        </div>
-        <div class="input-group">
-            <label for="stopLossPrice">Stock Stop Loss Price (₹):</label>
-            <input type="number" id="stopLossPrice" placeholder="Enter stock stop loss price">
-        </div>
-        <div class="input-group">
-            <label for="riskPercentage">Risk Percentage (%):</label>
-            <input type="number" id="riskPercentage" placeholder="Enter risk percentage">
-        </div>
-        <div class="input-group">
-            <label for="riskRewardRatio">Risk-Reward Ratio:</label>
-            <input type="number" id="riskRewardRatio" placeholder="Enter risk-reward ratio">
-        </div>
-        <button onclick="calculatePositionSize()">Calculate</button>
+        <form id="calculatorForm">
+            <div class="input-group">
+                <label for="activeCapital"><i class="fas fa-wallet"></i> Active Capital (₹):</label>
+                <input type="number" id="activeCapital" placeholder="Enter active capital">
+            </div>
+            <div class="input-group">
+                <label for="entryPrice"><i class="fas fa-sign-in-alt"></i> Stock Entry Price (₹):</label>
+                <input type="number" id="entryPrice" placeholder="Enter stock entry price">
+            </div>
+            <div class="input-group">
+                <label for="stopLossPrice"><i class="fas fa-exclamation-triangle"></i> Stock Stop Loss Price (₹):</label>
+                <input type="number" id="stopLossPrice" placeholder="Enter stock stop loss price">
+            </div>
+            <div class="input-group">
+                <label for="riskPercentage"><i class="fas fa-percent"></i> Risk Percentage (%):</label>
+                <input type="number" id="riskPercentage" placeholder="Enter risk percentage">
+            </div>
+            <div class="input-group">
+                <label for="riskRewardRatio"><i class="fas fa-exchange-alt"></i> Risk-Reward Ratio:</label>
+                <input type="number" id="riskRewardRatio" placeholder="Enter risk-reward ratio">
+            </div>
+            <div class="button-group">
+                <button type="button" id="calculateButton" onclick="calculatePositionSize()">Calculate</button>
+                <button type="button" id="resetButton" onclick="resetValues()">Reset</button>
+            </div>
+        </form>
         <div id="results">
             <table>
-                <tr>
-                    <th>Result</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Position Size</td>
-                    <td id="positionSize">-</td>
-                </tr>
-                <tr>
-                    <td>Risked Amount</td>
-                    <td id="riskedAmount">-</td>
-                </tr>
-                <tr>
-                    <td>Take Profit Value</td>
-                    <td id="takeProfit">-</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Result</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fas fa-chart-line"></i> Position Size</td>
+                        <td id="positionSize">-</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-coins"></i> Risked Amount</td>
+                        <td id="riskedAmount">-</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-arrow-up"></i> Take Profit Value</td>
+                        <td id="takeProfit">-</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
