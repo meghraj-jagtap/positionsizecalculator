@@ -31,13 +31,14 @@ h1 {
 }
 
 .input-group input {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 8px;
     box-sizing: border-box;
+    display: inline-block;
 }
 
 button {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -55,6 +56,35 @@ button:hover {
     text-align: center;
 }
 
-#results p {
-    margin: 5px 0;
+table {
+   width: calc(100% - 20px);
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    font-weight: bold;
+}
+
+#positionSize {
+    color: #4CAF50; /* Green */
+}
+
+#riskedAmount {
+    color: #FF5722; /* Orange */
+}
+
+#takeProfit {
+    color: #2196F3; /* Blue */
 }
