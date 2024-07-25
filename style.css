@@ -31,7 +31,7 @@ h1 {
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .input-group label {
@@ -42,7 +42,7 @@ h1 {
 }
 
 .input-group input {
-    width: 100%;
+    width: auto;
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -92,7 +92,7 @@ button {
 }
 
 table {
-    width: 103%;
+    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
     border-radius: 8px;
